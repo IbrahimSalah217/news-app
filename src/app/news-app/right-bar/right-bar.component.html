@@ -1,0 +1,15 @@
+<div class="list-group">
+  <div
+    class="d-flex w-100 justify-content-between list-group-item list-group-item-action flex-column align-items-start active">
+    <h3 class="mb-1">Top News</h3>
+  </div>
+
+  <a [routerLink]="['/newDetails',newItem.ID]" routerLinkctive="router-link-active" *ngFor="let newItem of topNews;let i=index ;"
+    class="list-group-item list-group-item-action flex-column">
+    <div class="d-flex w-100 justify-content-between">
+      <b class="mb-1">{{newItem.Name}}</b>
+    </div>
+    <small class="bg-primary text-white">{{newItem.Date | date}}</small>
+    <!-- <small>Donec id elit non mi porta.</small> -->
+  </a>
+</div>

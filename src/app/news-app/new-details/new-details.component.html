@@ -1,0 +1,21 @@
+
+
+  <a href="#"
+      class="list-group-item list-group-item-action flex-column">
+    <div class="d-flex w-100 justify-content-center">
+      <b class="mb-1">{{currentNew.Name}}</b>
+    </div>
+    <div class="d-flex w-100 justify-content-center">
+      <small class="bg-success text-white align-middle">{{currentNew.Date | date}}</small>
+    </div>
+    <div class="d-flex w-100 justify-content-center text-center">
+      <img src="{{currentNew.Image}}" class="img-fluid  align-middle">
+    </div>
+    
+  </a>
+  <div class="d-flex w-100 justify-content-center">
+    <p class="mb-1" [innerHtml]="currentNew.Desc"></p>
+  </div>
+  <div>
+    <button class="btn-primary" (click)="returnToDept(currentNew.DepartmentID)">Back</button>
+  </div>
